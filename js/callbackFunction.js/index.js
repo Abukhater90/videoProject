@@ -48,15 +48,10 @@ function convertToUpperCase(movie, callback) {
 
  function reverseWords(description) {
     return description.split(' ').reverse().join(' ');
-  }
+                                    }
 
-  console.log(reverseWords("amal nabil shweiki"))
-
-
-
-  function  reverseWordsInMovieDescription(movie,callback) {
+function  reverseWordsInMovieDescription(movie,callback) {
     movie.description=callback(movie.description);
-
     console.log(movie)           
                                   }
     movie1={ title: "Movie 1", description: "An exciting action thriller" };                            
