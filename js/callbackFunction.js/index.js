@@ -45,8 +45,8 @@ function convertToUpperCase(movie, callback) {
    addExclamationtoMovieTitle(movie1, addExclamation)
 
    //Exercise 4: Reverse Words in Movie Description
-
- function reverseWords(description) {
+   
+ function reverseWords(description) {  //CR- adding validation checks to ensure that the description property exists in the movie object before attempting to apply the changes
     return description.split(' ').reverse().join(' ');
                                     }
 
