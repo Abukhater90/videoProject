@@ -404,3 +404,31 @@ const movieTitleAndRate = [
 
 const highRatedMovies = highlyRatedMovies(movieTitleAndRate, 9.1);
 console.log(highRatedMovies);
+
+//-----------------------------------------------------------------------------
+/*
+const movies = [
+  { title: "The Shawshank Redemption", rating: 9.3, votes: 2337890, genre: ["Drama"], year: 1994 },
+  { title: "The Godfather", rating: 9.2, votes: 1603867, genre: ["Crime", "Drama"], year: 1972 },
+  { title: "The Godfather: Part II", rating: 9.0, votes: 1123155, genre: ["Crime", "Drama"], year: 1974 },
+  { title: "The Dark Knight", rating: 9.0, votes: 2273490, genre: ["Action", "Crime", "Drama"], year: 2008 },
+  { title: "12 Angry Men", rating: 9.0, votes: 686888, genre: ["Crime", "Drama"], year: 1957 }
+];
+
+3. Total Votes Count
+Input: An array of movie objects.
+Task: Return the total count of votes across all movies.
+Example: Given the input data, the function should return: 7912782
+*/
+function getTotalVotesCount(movies) {
+  return movies.reduce((totalVotes, movie) => totalVotes + movie.votes, 0);
+}
+const movies1 = [
+  { title: "The Shawshank Redemption", rating: 9.3, votes: 2337890, genre: ["Drama"], year: 1994 },
+  { title: "The Godfather", rating: 9.2, votes: 1603867, genre: ["Crime", "Drama"], year: 1972 },
+  { title: "The Godfather: Part II", rating: 9.0, votes: 1123155, genre: ["Crime", "Drama"], year: 1974 },
+  { title: "The Dark Knight", rating: 9.0, votes: 2273490, genre: ["Action", "Crime", "Drama"], year: 2008 },
+  { title: "12 Angry Men", rating: 9.0, votes: 686888, genre: ["Crime", "Drama"], year: 1957 }
+];
+const totalVotesCount = getTotalVotesCount(movies1);
+console.log(totalVotesCount); // Output: 7912782
