@@ -83,17 +83,50 @@ class user
 {
 
     constructor ( userName)
-
     {
+     this.userName = userName ;
+       this.watchedMedia = [] ;
 
 
-        new 
+        addMedia (media)
+        {    
+            this.watchedMedia.push(media);
+        }
+
+        rateMedia (media ,rating )
+        {
+
+            if (this.watchedMedia.includes(media) )
+            {
+                media.addRating(rating);
+
+                console.log(`You have rated "${media.title}" with a rating of ${rating}.`);
+            }
+
+
+            else {
+                return "You can only rate media you've watched "
+                }
+
+        }
+
+        displayWatchedMedia ()
+        {
+
+              return `       `  
+
+        }
+
 
 
     }
 
-    
-
-
 
 }
+
+
+
+
+
+
+
