@@ -70,5 +70,6 @@ const person = {
 
 //    console.log(array);
 
-const names = { name : "ali" , car : {model: 2009} }
-console.log (names.car.model);
+
+
+
