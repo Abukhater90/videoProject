@@ -504,6 +504,12 @@ const agencies = [
 
 
 
+
+  /*
+
+
+
+
   
 //2.0
   const booleanToString = varboolean => varboolean.toString();
@@ -871,4 +877,6 @@ console.log(findDuplicates('1234'))
 console.log(findDuplicates('5556')) 
 console.log(findDuplicates('assse')) 
 
+
+*/
 
