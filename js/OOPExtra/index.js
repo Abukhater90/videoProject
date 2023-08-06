@@ -2,6 +2,10 @@
 ///Advanced Movie Rating System using ES6 Classes & OOP Principles
 //Abstraction:
 class Movie {
+  // CR - for real private properties - you add them before the constructor, this way
+  //  #ratings;
+  // and then define them in the constructor
+  
   constructor(title, releaseYear, genre) {
     this.title = title;
     this.releaseYear = releaseYear;
@@ -23,11 +27,11 @@ class Movie {
     if (this._ratings.length === 0) {
       return "No ratings yet";
     }
-    if (this._ratings.length === 0) {
+    if (this._ratings.length === 0) { // CR - delete this - duplicate
     }
     let sum = this._ratings.reduce((sum, rating) => sum + rating, 0);
     let averageRating = sum / this._ratings.length;
-    return averageRating;
+    return averageRating; // CR - Could be just "return this._ratings.reduce((sum, rating) => sum + rating, 0) / this._ratings.length;"
   }
 
   displayDetails() {
@@ -43,6 +47,10 @@ class Series extends Movie {
     this.numberOfEpisodes = numberOfEpisodes;
   }
   displayDetails() {
+    /* CR - Should be like this:
+        super.displayDetails();
+        console.log(`Number of Episodes: ${this.numberOfEpisodes}`);
+    */
     return `Title: ${this.title}, Release Year: ${this.releaseYearn} , Genre:${this.genre} , Number Of Epside: ${this.numberOfEpisodes}`;
   }
   typeOfMovie() {
@@ -56,6 +64,11 @@ class Documentary extends Movie {
   }
 
   displayDetails() {
+    /*
+      CR- should be:
+      super.displayDetails();
+      console.log(`Topic: ${this.topic}`);
+    */
     return `Title: ${this.title}, Release Year: ${this.releaseYearn} , Genre:${this.genre} , Topic: ${this.topic}`;
   }
   typeOfMovie() {
