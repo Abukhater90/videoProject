@@ -432,3 +432,33 @@ const movies1 = [
 ];
 const totalVotesCount = getTotalVotesCount(movies1);
 console.log(totalVotesCount); // Output: 7912782
+
+//-----------------------------------------------------------------------------
+/*
+const movies = [
+  { title: "The Shawshank Redemption", rating: 9.3, votes: 2337890, genre: ["Drama"], year: 1994 },
+  { title: "The Godfather", rating: 9.2, votes: 1603867, genre: ["Crime", "Drama"], year: 1972 },
+  { title: "The Godfather: Part II", rating: 9.0, votes: 1123155, genre: ["Crime", "Drama"], year: 1974 },
+  { title: "The Dark Knight", rating: 9.0, votes: 2273490, genre: ["Action", "Crime", "Drama"], year: 2008 },
+  { title: "12 Angry Men", rating: 9.0, votes: 686888, genre: ["Crime", "Drama"], year: 1957 }
+];
+
+4. Combine Movie Titles and Ratings
+Input: An array of movie objects.
+Task: Return a new array with strings combining the movie title and its rating. Each
+string should be formatted as "{title} - {rating}".
+Example: Given the input data, the first item in the returned array should be: "The
+Shawshank Redemption - 9.3"
+*/
+function getTitleWithRating(movies) {
+  return movies2.map(movie => `${movie.title} - ${movie.rating}`);
+}
+const movies2 = [
+  { title: "The Shawshank Redemption", rating: 9.3, votes: 2337890, genre: ["Drama"], year: 1994 },
+  { title: "The Godfather", rating: 9.2, votes: 1603867, genre: ["Crime", "Drama"], year: 1972 },
+  { title: "The Godfather: Part II", rating: 9.0, votes: 1123155, genre: ["Crime", "Drama"], year: 1974 },
+  { title: "The Dark Knight", rating: 9.0, votes: 2273490, genre: ["Action", "Crime", "Drama"], year: 2008 },
+  { title: "12 Angry Men", rating: 9.0, votes: 686888, genre: ["Crime", "Drama"], year: 1957 }
+];
+const titleWithRatingArray = getTitleWithRating(movies);
+console.log(titleWithRatingArray);
