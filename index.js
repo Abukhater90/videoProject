@@ -594,3 +594,32 @@ const averageRating = calculateAverageRating(movies6);
 console.log(averageRating); // Output: "9.1"
 
 //-----------------------------------------------------------------------------
+/*
+const movies = [
+  { title: "The Shawshank Redemption", rating: 9.3, votes: 2337890, genre: ["Drama"], year: 1994 },
+  { title: "The Godfather", rating: 9.2, votes: 1603867, genre: ["Crime", "Drama"], year: 1972 },
+  { title: "The Godfather: Part II", rating: 9.0, votes: 1123155, genre: ["Crime", "Drama"], year: 1974 },
+  { title: "The Dark Knight", rating: 9.0, votes: 2273490, genre: ["Action", "Crime", "Drama"], year: 2008 },
+  { title: "12 Angry Men", rating: 9.0, votes: 686888, genre: ["Crime", "Drama"], year: 1957 }
+];
+
+9. Sort Movies by Votes
+Input: An array of movie objects.
+Task: Return a new array sorted by the number of votes in descending order.
+Example: Given the input data, the first movie in the returned array should be "The
+Shawshank Redemption" and the last should be "12 Angry Men".
+*/
+
+function sortByVotesDescending(movies7) {
+  return movies7.slice().sort((a, b) => b.votes - a.votes);
+}
+const movies7 = [
+  { title: "The Shawshank Redemption", rating: 9.3, votes: 2337890, genre: ["Drama"], year: 1994 },
+  { title: "The Godfather", rating: 9.2, votes: 1603867, genre: ["Crime", "Drama"], year: 1972 },
+  { title: "The Godfather: Part II", rating: 9.0, votes: 1123155, genre: ["Crime", "Drama"], year: 1974 },
+  { title: "The Dark Knight", rating: 9.0, votes: 2273490, genre: ["Action", "Crime", "Drama"], year: 2008 },
+  { title: "12 Angry Men", rating: 9.0, votes: 686888, genre: ["Crime", "Drama"], year: 1957 }
+];
+
+const sortedByVotesDescending = sortByVotesDescending(movies7);
+console.log(sortedByVotesDescending);
