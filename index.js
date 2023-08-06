@@ -560,3 +560,37 @@ const movies5 = [
 
 const moviesReleasedAfter2000 = getMoviesReleasedAfterYear(movies5, 2000);
 console.log(moviesReleasedAfter2000);
+
+//-----------------------------------------------------------------------------
+/*
+const movies = [
+  { title: "The Shawshank Redemption", rating: 9.3, votes: 2337890, genre: ["Drama"], year: 1994 },
+  { title: "The Godfather", rating: 9.2, votes: 1603867, genre: ["Crime", "Drama"], year: 1972 },
+  { title: "The Godfather: Part II", rating: 9.0, votes: 1123155, genre: ["Crime", "Drama"], year: 1974 },
+  { title: "The Dark Knight", rating: 9.0, votes: 2273490, genre: ["Action", "Crime", "Drama"], year: 2008 },
+  { title: "12 Angry Men", rating: 9.0, votes: 686888, genre: ["Crime", "Drama"], year: 1957 }
+];
+
+8. Average Movie Rating
+Input: An array of movie objects.
+Task: Calculate and return the average movie rating.
+Example: Given the input data, the function should return approximately 9.1.
+
+*/
+function calculateAverageRating(movies6) {
+  const totalRatings = movies6.reduce((total, movie) => total + movie.rating, 0);
+  const averageRating = totalRatings / movies6.length;
+  return averageRating.toFixed(1);
+}
+const movies6 = [
+  { title: "The Shawshank Redemption", rating: 9.3, votes: 2337890, genre: ["Drama"], year: 1994 },
+  { title: "The Godfather", rating: 9.2, votes: 1603867, genre: ["Crime", "Drama"], year: 1972 },
+  { title: "The Godfather: Part II", rating: 9.0, votes: 1123155, genre: ["Crime", "Drama"], year: 1974 },
+  { title: "The Dark Knight", rating: 9.0, votes: 2273490, genre: ["Action", "Crime", "Drama"], year: 2008 },
+  { title: "12 Angry Men", rating: 9.0, votes: 686888, genre: ["Crime", "Drama"], year: 1957 }
+];
+
+const averageRating = calculateAverageRating(movies6);
+console.log(averageRating); // Output: "9.1"
+
+//-----------------------------------------------------------------------------
