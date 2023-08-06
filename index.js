@@ -529,3 +529,34 @@ const movies4 = [
 
 const dramaMovies = getMoviesByGenre(movies4, "Drama");
 console.log(dramaMovies);
+
+//-----------------------------------------------------------------------------
+/*
+const movies = [
+  { title: "The Shawshank Redemption", rating: 9.3, votes: 2337890, genre: ["Drama"], year: 1994 },
+  { title: "The Godfather", rating: 9.2, votes: 1603867, genre: ["Crime", "Drama"], year: 1972 },
+  { title: "The Godfather: Part II", rating: 9.0, votes: 1123155, genre: ["Crime", "Drama"], year: 1974 },
+  { title: "The Dark Knight", rating: 9.0, votes: 2273490, genre: ["Action", "Crime", "Drama"], year: 2008 },
+  { title: "12 Angry Men", rating: 9.0, votes: 686888, genre: ["Crime", "Drama"], year: 1957 }
+];
+
+7. Yearly Movie Filter
+Input: An array of movie objects, a year.
+Task: Return a new array containing only movies that were released after the
+specified year.
+Example: Given the input data and the year 2000, the function should return an array
+with only "The Dark Knight".
+*/
+function getMoviesReleasedAfterYear(movies5, year) {
+  return movies5.filter(movie => movie.year > year);
+}
+const movies5 = [
+  { title: "The Shawshank Redemption", rating: 9.3, votes: 2337890, genre: ["Drama"], year: 1994 },
+  { title: "The Godfather", rating: 9.2, votes: 1603867, genre: ["Crime", "Drama"], year: 1972 },
+  { title: "The Godfather: Part II", rating: 9.0, votes: 1123155, genre: ["Crime", "Drama"], year: 1974 },
+  { title: "The Dark Knight", rating: 9.0, votes: 2273490, genre: ["Action", "Crime", "Drama"], year: 2008 },
+  { title: "12 Angry Men", rating: 9.0, votes: 686888, genre: ["Crime", "Drama"], year: 1957 }
+];
+
+const moviesReleasedAfter2000 = getMoviesReleasedAfterYear(movies5, 2000);
+console.log(moviesReleasedAfter2000);
