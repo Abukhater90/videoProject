@@ -462,3 +462,39 @@ const movies2 = [
 ];
 const titleWithRatingArray = getTitleWithRating(movies);
 console.log(titleWithRatingArray);
+
+//-----------------------------------------------------------------------------
+/*
+const movies = [
+  { title: "The Shawshank Redemption", rating: 9.3, votes: 2337890, genre: ["Drama"], year: 1994 },
+  { title: "The Godfather", rating: 9.2, votes: 1603867, genre: ["Crime", "Drama"], year: 1972 },
+  { title: "The Godfather: Part II", rating: 9.0, votes: 1123155, genre: ["Crime", "Drama"], year: 1974 },
+  { title: "The Dark Knight", rating: 9.0, votes: 2273490, genre: ["Action", "Crime", "Drama"], year: 2008 },
+  { title: "12 Angry Men", rating: 9.0, votes: 686888, genre: ["Crime", "Drama"], year: 1957 }
+];
+5. Update Movie Ratings
+Input: An array of movie objects, a new rating, and a movie title.
+Task: Update the rating of the specified movie in the array and return the updated
+array.
+Example: Given the input data, a rating of 9.5, and the title "The Shawshank
+Redemption", the updated rating of "The Shawshank Redemption" in the returned
+array should be 9.5.
+*/
+function updateMovieRating(movies3, title, newRating) {
+  return movies3.map(movie => {
+    if (movie.title === title) {
+      return { ...movie, rating: newRating };
+    }
+    return movie;
+  });
+}
+const movies3 = [
+  { title: "The Shawshank Redemption", rating: 9.3, votes: 2337890, genre: ["Drama"], year: 1994 },
+  { title: "The Godfather", rating: 9.2, votes: 1603867, genre: ["Crime", "Drama"], year: 1972 },
+  { title: "The Godfather: Part II", rating: 9.0, votes: 1123155, genre: ["Crime", "Drama"], year: 1974 },
+  { title: "The Dark Knight", rating: 9.0, votes: 2273490, genre: ["Action", "Crime", "Drama"], year: 2008 },
+  { title: "12 Angry Men", rating: 9.0, votes: 686888, genre: ["Crime", "Drama"], year: 1957 }
+];
+
+const updatedMovies = updateMovieRating(movies, "The Shawshank Redemption", 9.5);
+console.log(updatedMovies);
