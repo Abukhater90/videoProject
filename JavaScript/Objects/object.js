@@ -51,9 +51,6 @@ movieDatabase.addRating("fast", 6)
 
 
 
-
-
-
  /*  addRating : function (MovieTitle,rating) {
   //  if (this.movies.title == MovieTitle ){this.movies.ratings.push(rating)}
   const movie = this.movies.find((movie)=> movie.title === MovieTitle)
