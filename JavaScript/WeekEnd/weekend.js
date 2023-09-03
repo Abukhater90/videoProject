@@ -15,13 +15,17 @@ console.log(arrayOfTasks[0].description);
 
 
 
+
+
 //2.
 function displayTasks (display){
-    for (const display of addTaskToArray){
-        console.log(display[0])
+    for (const display of arrayOfTasks){
+        console.log(display)
     }
 }
 displayTasks();
+
+
 
 
 
